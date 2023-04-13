@@ -15,7 +15,6 @@ import Home from './Home';
 import Projects from './Projects';
 import About from './About';
 import NoMatch from './Nomatch';
-import Basic from './Basic';
 import BreadcrumbNav from './BreadcrumbNav';
 
 
