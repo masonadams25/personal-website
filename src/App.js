@@ -3,37 +3,50 @@ import {
   ChakraProvider,
   Box,
   Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
   theme,
+  Center,
+  Flex,
+  Spacer,
+  Stack
 } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+
+import { Routes, Route} from "react-router-dom";
+import Home from './Home';
+import Projects from './Projects';
+import About from './About';
+import NoMatch from './Nomatch';
+import Basic from './Basic';
+import BreadcrumbNav from './BreadcrumbNav';
+
+
+
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
+      <Box bg='black' w='100%' h = '64px' p={4} color='white' style={{position: 'sticky', top: '0'}}>
+        <Flex justifyContent={'center'}>
+          <Text bgGradient='linear(to-r, #0648F9, #2CD383)' bgClip='text' fontSize={['m','l', 'xl', '2xl','3xl']} fontWeight='extrabold'>
+            Mason Adams
+          </Text>
+          <Spacer/>
+          <Stack>
+            <Spacer/>
+            <BreadcrumbNav/>
+          </Stack>
+          {/*<ColorModeSwitcher justifySelf="right-end" />*/}
+        </Flex>
+      </Box>      
+      <Box>
+        <Center>
+        <Routes>
+            <Route path="/" element={<Basic/>}/>
+            <Route path="Home" element={<Home/>}/>
+            <Route path="About" element={<About/>}/>
+            <Route path="Projects" element={<Projects/>}/>
+            <Route path="*" element={<NoMatch />} />
+          </Routes> 
+        </Center>
       </Box>
     </ChakraProvider>
   );
