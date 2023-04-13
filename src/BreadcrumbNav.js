@@ -10,7 +10,7 @@ import { NavLink as Reactlink } from "react-router-dom";
 
 function BreadcrumbNav() {
     return (
-        <Breadcrumb spacing={['2px','4px','6px','8px']} separator={<ChevronRightIcon color='gray.500' />}>
+        <Breadcrumb spacing={['2px','4px','6px','8px']} separator={<ChevronRightIcon color='white' />}>
             <BreadcrumbItem>
                 <BreadcrumbLink style={({ isActive }) => ({ color: isActive ? '#2CD383' : 'white' })} fontSize={['xs','s', 'l','1xl','2xl']} fontWeight='extrabold' as={Reactlink} to="/">Home</BreadcrumbLink>
              </BreadcrumbItem>

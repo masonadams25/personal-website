@@ -23,7 +23,7 @@ import BreadcrumbNav from './BreadcrumbNav';
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box bg='black' w='100%' h = '64px' p={4} color='white' style={{position: 'sticky', top: '0'}}>
+      <Box opacity='1'bg='gray.700' w='100%' h = '64px' p={4} color='white' style={{position: 'sticky', top: '0'}}>
         <Flex justifyContent={'center'}>
           <Text bgGradient='linear(to-r, #0648F9, #2CD383)' bgClip='text' fontSize={['m','l', 'xl', '2xl','3xl']} fontWeight='extrabold'>
             Mason Adams
