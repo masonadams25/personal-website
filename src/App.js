@@ -40,8 +40,7 @@ function App() {
       <Box>
         <Center>
         <Routes>
-            <Route path="/" element={<Basic/>}/>
-            <Route path="Home" element={<Home/>}/>
+            <Route path="/" element={<Home/>}/>
             <Route path="About" element={<About/>}/>
             <Route path="Projects" element={<Projects/>}/>
             <Route path="*" element={<NoMatch />} />
